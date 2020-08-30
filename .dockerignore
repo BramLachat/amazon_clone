@@ -1,0 +1,10 @@
+node_modules
+build
+.firebase
+.dockerignore
+.firebaserc
+.gitignore
+Dockerfile
+Dockerfile.prod
+firebase.json
+README.md
