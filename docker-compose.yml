@@ -2,12 +2,8 @@ version: '3.7'
 
 services:
     amazon:
-        container_name: amazon
-        build:
-            context: .
-            dockerfile: Dockerfile
-        volumes:
-            - '.:/app'
-            - '/app/node_modules'
+        image: amazon
+        container_name: amazon_clone
         ports:
             - 3000:3000
+        stdin_open: true

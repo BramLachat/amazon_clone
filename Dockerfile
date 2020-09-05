@@ -2,19 +2,16 @@
 FROM node:12.18.3
 
 # set working directory
-WORKDIR /app
+WORKDIR /amazon
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-
-# install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
-#RUN npm install
-#RUN npm install react-scripts@3.4.1 -g
-
-# add app
+# copy current directory to current working directory (/amazon)
 COPY . ./
 
-# start app
+# RUN gets executed once at build time
+RUN npm install
+
+#default port opened by React when npm start is executed
+EXPOSE 3000
+
+#CMD lets you define a default command to run when your container starts
 CMD ["npm", "start"]
