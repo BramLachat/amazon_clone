@@ -1,3 +1,10 @@
+## How to start developing:
+
+1. git clone ...
+2. npm install
+3. add the `firebase.js` file in the `src` folder
+4. npm start
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
